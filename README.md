@@ -124,4 +124,5 @@ recherhce internet : temps nécessaire pour chaque personne pour passer par la s
 1. Faire le plan
 2. Chacun prend ses parties à présenter et faire les diapos
 3. écrire le script pour la présentation
+4. oublie pas de compléter aussi les commentaires de codes dans jupyter
 
