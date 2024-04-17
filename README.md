@@ -20,7 +20,9 @@ Une densité élevée de population peut entraîner des ralentissements et des b
 2. Proposer des recommandations pour optimiser les stratégies d'évacuation
 
 # Critères d'évaluation :
-- Evaluer le nombre d'individus évacués avec succès dans un temps limité.
+- Évaluer l'efficacité dans le processus d'évacuation : le nombre d'individus évacués avec succès dans un temps limité.
+- Comparer des temps de fuite, du choix des itinéraires d'évacuation etc dans différents scénarios, ainsi que de l'existence ou non d'un blocage au cours de la simulation.
+
 -------------------------------------------------------------------------
 
 
@@ -81,25 +83,42 @@ On a fait le graphe pour n personnes qui choisissent leur sortie plus proche
 
 
 
+
+
 # Notre planning :
 
 ## Partie Code
-1. Il faut qu'on ajoute une condition dans step_people : quand la personne sort, elle s'arrete à bouger
+1. Ajoute une condition dans step_people : quand la personne sort, elle s'arrete à bouger
   - proposition 1 : calculer la distance entre la dernière position et la sortie, si c'est inférieur à un nombre très petit(1 par exemple, ca dépend de la dimesion de l'espace), pour le temps qui reste, ses coordonnées ne changent pas
-  - proposition 2 : on évaluue le signe du prochain step et le step précedent, si c'est pas le même, cela signifie que la personne est déjà sortie et va retourner dans l'espace
+  - proposition 2 : on regarde le signe du prochain step et le step précedent, si c'est pas le même, cela signifie que la personne est déjà sortie et va retourner dans l'espace
+
 
 2. Ajouter un paramètre sur la largeur de sortie, donc elle peut faire passer plus d'une personne en même temps
--> on peut comparer le temps d'évacuation  et le nombre d'individus évacués à différentes tailles de sortie
 
-3. Faire une file d'attente : créer une liste d'individus(chacun a son indice/numéro), pour les individus déjà sortis, on les retire de la liste
 
-4. Tous les individus doivent avoir ses propres vitesses, et ça varie dans certaines situation
-  - ralenti lorsqu'il y a beaucoup de gens autour de l'individu / devant la sortie(blocages)
-  - accéléré lorsqu'il y a très peu de gens autour d'elle/dans l'espace
+3. Faire une file d'attente pour visualiser le nombre de perso évacuées : créer une liste d'individus(chacun a son indice/numéro), pour les individus déjà sortis, on les retire de la liste
+recherhce internet : temps nécessaire pour chaque personne pour passer par la sortie dans une situation réaliste?
 
-5. Des métriques
-6. Des graphes pour différent metriques
-7. Animation
+
+4. Mettre à jour les caractéristiques et l'état des individus en fonction de leur comportement et des facteurs influents (dans generate_people peut-etre? puis modifier step_people
+    1. niveau de perception(modélisation des différentes réactions et capacités de prise de décision) :
+        - générer aléatoirement une valeur de niveau de perception pour chaque individu : soit faible soit élevé
+        - différences de vitesse de réaction :  les individus ayant de niveau élevé réagissent plus vite et se déplacent plus rapidement et inversement.
+    2. interactions entre les personnes
+        - vitesse ralentie lorsqu'il y a beaucoup de gens autour de l'individu / devant la sortie(blocages)
+        - vitesse plus rapide lorsqu'il y a très peu de gens
+        - 2 personnes très proches vont se rencontrer au même point : l'un des deux s'arrête ou ralentit
+
+
+5. Des métriques(voir schelling) ->graphes pour différent metriques
+
+6. Animation /video?
+
+7. Commentaire, conclusion
+-> on compare le temps d'évacuation et le nombre d'individus évacués à différentes tailles de sortie
+-> les autres voir les critères d'éval en haut
+
+
 
 ##Partie Présentation
 1. Faire le plan
