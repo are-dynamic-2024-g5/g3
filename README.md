@@ -88,38 +88,41 @@ On a fait le graphe pour n personnes qui choisissent leur sortie plus proche
 - modification step_people : j'ai supprimé le paramètre v, on calcule les steps de personnes avec ses propres vitesses
 - nouvelle fonction evacuation(liste_step, sorties) : retourne une liste contenant les numéros de personnes évacuées
 
-
+18/4 Chenye :
+- Ajouter la condition de sortie dans step_people, marqué True dans la dernière colonne si la personne est sortie
 
 
 # Notre planning :
 
 ## Partie Code
-1. Ajoute une condition dans step_people : quand la personne sort, elle s'arrete à bouger
-  - proposition 1 : calculer la distance entre la dernière position et la sortie, si c'est inférieur à un nombre très petit(1 par exemple, ca dépend de la dimesion de l'espace), pour le temps qui reste, ses coordonnées ne changent pas
-  - proposition 2 : on regarde le signe du prochain step et le step précedent, si c'est pas le même, cela signifie que la personne est déjà sortie et va retourner dans l'espace
+1. (C'est fait!) Ajoute une condition dans step_people : quand la personne sort, elle s'arrete à bouger
+  - calculer la distance entre la dernière position et la sortie, si c'est inférieur à un nombre très petit(1 par exemple, ca dépend de la dimesion de l'espace et la vitesse), pour le temps qui reste, ses coordonnées ne changent pas
 
 
-2. Ajouter un paramètre sur la largeur de sortie, donc elle peut faire passer plus d'une personne en même temps
+2. (C'est fait!) Faire une file d'attente pour visualiser le nombre de perso évacuées : créer une liste d'individus(chacun a son indice/numéro), pour les individus déjà sortis, on les retire de la liste
 
 
-3. (C'est fait!) Faire une file d'attente pour visualiser le nombre de perso évacuées : créer une liste d'individus(chacun a son indice/numéro), pour les individus déjà sortis, on les retire de la liste
+Mettre à jour les caractéristiques et l'état des individus en fonction de leur comportement et des facteurs influents:
+
+3. (C'est fait!) niveau de perception(modélisation des différentes réactions et capacités de prise de décision) :
+    - générer aléatoirement une valeur de niveau de perception pour chaque individu : soit faible soit élevé
+    - différences de vitesse de réaction :  les individus ayant de niveau élevé réagissent plus vite et se déplacent plus rapidement et inversement.
+
+4. interactions entre les personnes
+   des idées:
+    - vitesse ralentie lorsqu'il y a beaucoup de gens autour de l'individu / devant la sortie(blocages)
+    - vitesse plus rapide lorsqu'il y a très peu de gens
+    - 2 personnes très proches vont se rencontrer au même point : l'un des deux s'arrête ou ralentit
 
 
-4. Mettre à jour les caractéristiques et l'état des individus en fonction de leur comportement et des facteurs influents (dans generate_people peut-etre? puis modifier step_people
-    1.  (C'est fait!) niveau de perception(modélisation des différentes réactions et capacités de prise de décision) :
-        - générer aléatoirement une valeur de niveau de perception pour chaque individu : soit faible soit élevé
-        - différences de vitesse de réaction :  les individus ayant de niveau élevé réagissent plus vite et se déplacent plus rapidement et inversement.
-    2. interactions entre les personnes
-        - vitesse ralentie lorsqu'il y a beaucoup de gens autour de l'individu / devant la sortie(blocages)
-        - vitesse plus rapide lorsqu'il y a très peu de gens
-        - 2 personnes très proches vont se rencontrer au même point : l'un des deux s'arrête ou ralentit
+5. Ajouter un paramètre sur la largeur de sortie, donc elle peut faire passer plus d'une personne en même temps
+   -> pour un meme nombre de personnes, le temps nécessaire à une évacuation réussie sera réduit
 
+7. Des métriques(voir schelling) ->graphes pour différent metriques
 
-5. Des métriques(voir schelling) ->graphes pour différent metriques
+8. Animation /video?
 
-6. Animation /video?
-
-7. Commentaire, conclusion
+9. Commentaire, conclusion
 -> on compare le temps d'évacuation et le nombre d'individus évacués à différentes tailles de sortie
 -> les autres voir les critères d'éval en haut
 
