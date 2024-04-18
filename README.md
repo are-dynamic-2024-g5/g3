@@ -115,7 +115,7 @@ Mettre à jour les caractéristiques et l'état des individus en fonction de leu
       - 2 personnes très proches vont se rencontrer au même point : l'un des deux s'arrête ou ralentit
 
 
-7. Ajouter un paramètre sur la largeur de sortie, donc elle peut faire passer plus d'une personne en même temps
+7. Ajouter un paramètre sur la largeur de sortie, donc elle peut faire passer plus d'une personne en même temps, faut prendre compte les coordonnées des sorties, elles ne sont plus un point unique
    -> pour un meme nombre de personnes, le temps nécessaire à une évacuation réussie sera réduit
 
 8. Des métriques(voir schelling) ->graphes pour différent metriques
