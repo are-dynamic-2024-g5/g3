@@ -82,6 +82,12 @@ On a fait le graphe pour n personnes qui choisissent leur sortie plus proche
 """""""""graphe png à ajouter""""""""""""
 
 
+# Vacances
+17/04 Chenye :
+- modification generer_people : ajouter les caractérisques pour chaque personne -> [numéro, x, y, nv de perception, vitesse], donc chaque personne a sa propre vitesse
+- modification step_people : j'ai supprimé le paramètre v, on calcule les steps de personnes avec ses propres vitesses
+- nouvelle fonction evacuation(liste_step, sorties) : retourne une liste contenant les numéros de personnes évacuées
+
 
 
 
@@ -96,12 +102,11 @@ On a fait le graphe pour n personnes qui choisissent leur sortie plus proche
 2. Ajouter un paramètre sur la largeur de sortie, donc elle peut faire passer plus d'une personne en même temps
 
 
-3. Faire une file d'attente pour visualiser le nombre de perso évacuées : créer une liste d'individus(chacun a son indice/numéro), pour les individus déjà sortis, on les retire de la liste
-recherhce internet : temps nécessaire pour chaque personne pour passer par la sortie dans une situation réaliste?
+3. (C'est fait!) Faire une file d'attente pour visualiser le nombre de perso évacuées : créer une liste d'individus(chacun a son indice/numéro), pour les individus déjà sortis, on les retire de la liste
 
 
 4. Mettre à jour les caractéristiques et l'état des individus en fonction de leur comportement et des facteurs influents (dans generate_people peut-etre? puis modifier step_people
-    1. niveau de perception(modélisation des différentes réactions et capacités de prise de décision) :
+    1.  (C'est fait!) niveau de perception(modélisation des différentes réactions et capacités de prise de décision) :
         - générer aléatoirement une valeur de niveau de perception pour chaque individu : soit faible soit élevé
         - différences de vitesse de réaction :  les individus ayant de niveau élevé réagissent plus vite et se déplacent plus rapidement et inversement.
     2. interactions entre les personnes
