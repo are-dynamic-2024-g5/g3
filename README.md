@@ -109,20 +109,20 @@ Mettre à jour les caractéristiques et l'état des individus en fonction de leu
     - différences de vitesse de réaction :  les individus ayant de niveau élevé réagissent plus vite et se déplacent plus rapidement et inversement.
 
 4. interactions entre les personnes
-   des idées:
-    - vitesse ralentie lorsqu'il y a beaucoup de gens autour de l'individu / devant la sortie(blocages)
-    - vitesse plus rapide lorsqu'il y a très peu de gens
-    - 2 personnes très proches vont se rencontrer au même point : l'un des deux s'arrête ou ralentit
+    - des idées:
+      - vitesse ralentie lorsqu'il y a beaucoup de gens autour de l'individu / devant la sortie(blocages)
+      - vitesse plus rapide lorsqu'il y a très peu de gens
+      - 2 personnes très proches vont se rencontrer au même point : l'un des deux s'arrête ou ralentit
 
 
-5. Ajouter un paramètre sur la largeur de sortie, donc elle peut faire passer plus d'une personne en même temps
+7. Ajouter un paramètre sur la largeur de sortie, donc elle peut faire passer plus d'une personne en même temps
    -> pour un meme nombre de personnes, le temps nécessaire à une évacuation réussie sera réduit
 
-7. Des métriques(voir schelling) ->graphes pour différent metriques
+8. Des métriques(voir schelling) ->graphes pour différent metriques
 
-8. Animation /video?
+9. Animation /video?
 
-9. Commentaire, conclusion
+10. Commentaire, conclusion
 -> on compare le temps d'évacuation et le nombre d'individus évacués à différentes tailles de sortie
 -> les autres voir les critères d'éval en haut
 
