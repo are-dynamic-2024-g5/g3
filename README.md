@@ -108,19 +108,19 @@ Mettre à jour les caractéristiques et l'état des individus en fonction de leu
     - générer aléatoirement une valeur de niveau de perception pour chaque individu : soit faible soit élevé
     - différences de vitesse de réaction :  les individus ayant de niveau élevé réagissent plus vite et se déplacent plus rapidement et inversement.
 
-4. interactions entre les personnes
+4.(C'est fait!) interactions entre les personnes
     - des idées:
       - vitesse ralentie lorsqu'il y a beaucoup de gens autour de l'individu / devant la sortie(blocages)
       - vitesse plus rapide lorsqu'il y a très peu de gens
       - 2 personnes très proches vont se rencontrer au même point : l'un des deux s'arrête ou ralentit
 
 
-7. Ajouter un paramètre sur la largeur de sortie, donc elle peut faire passer plus d'une personne en même temps, faut prendre compte les coordonnées des sorties, elles ne sont plus un point unique
+7.(C'est fait!) Ajouter un paramètre sur la largeur de sortie, donc elle peut faire passer plus d'une personne en même temps, faut prendre compte les coordonnées des sorties, elles ne sont plus un point unique
    -> pour un meme nombre de personnes, le temps nécessaire à une évacuation réussie sera réduit
 
 8. Des métriques(voir schelling) ->graphes pour différent metriques
 
-9. Animation /video?
+9.(C'est fait!) Animation /video?
 
 10. Commentaire, conclusion
 -> on compare le temps d'évacuation et le nombre d'individus évacués à différentes tailles de sortie
