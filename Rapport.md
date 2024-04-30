@@ -54,14 +54,14 @@ Le taux d'évacuation représente le pourcentage de personnes évacuées par rap
 Situation : Nous avons un espace de dimensions 30 m x 30 m, équipé de 2 sorties pour l'évacuation. Nous simulons le déplacement de 10 jusqu'à 100 personnes à travers cet espace, avec une vitesse variant entre 0.3 et 0.8 m/s pour le niveau de perception faible, et entre 1.0 et 1.6 m/s pour le niveau élevé.
 
 1. Temps d'évacuation total/moyen en fonction de densité de population
-
+<img src="nb_pers/temps_evac_nb_pers.png">
 Ce graphe représente le temps d'évacuation total et le temps moyen en fonction de la densité de population. Initialement, lorsque le nombre de personnes est faible, l'écart entre les deux courbes est relativement petit. Cependant, au fur et à mesure que la densité de population augmente, la différence entre les deux temps augmente également. Cela indique que l'augmentation de la densité de population a un impact sur la différence entre le temps d'évacuation total et le temps moyen.
 
 Cette différence croissante peut s'expliquer par le blocage des sorties. Avec l'augmentation de la densité, les sorties risquent d'être bloquées, de plus en plus de personnes attendent l'évacuation devant les sorties, ce qui prolongera le temps d'évacuation total. D'ailleurs, les temps de parcours moyens élevés peuvent être dû à des obstacles sur le chemin de sortie, à des défaillances des infrastructures ou à d'autres facteurs qui empêchent le mouvement des personnes.
 
 
 2. Taux d'évacuation en fonction de la densité de personnes (pour 120 secondes)¶
-
+<img src="nb_pers/taux_evac_nbPers.png">
 Dans ce graphique, nous remarquons jusqu'à 60 personnes, le taux d'évacuation est optimal, avec toutes les personnes évacuées dans les 120 secondes. Cependant, au-delà de 60 personnes, le taux d'évacuation diminue fortement. Avec 70 personnes, le taux d'évacuation est de 97%, tandis qu'avec 100 personnes, il chute à 75%.
 
 Cette simulation met en évidence l'impact de la densité de population sur l'efficacité de l'évacuation. Plus la densité de personnes dans l'espace est élevée, plus il est difficile de garantir une évacuation rapide et efficace. Cela montre l'importance de prendre en compte la densité de population lors de la conception des espaces, afin de garantir des conditions optimales d'évacuation. 
@@ -71,33 +71,29 @@ Cette simulation met en évidence l'impact de la densité de population sur l'ef
 Situation : un espace de 30x30 avec deux sorties disponibles. Nous avons pris en compte tous les niveaux de perception du danger avec deux plages de vitesses : de 0.3 à 0.8 m/s pour la faible et de 1.0 à 1.6 m/s pour l'élevée.
 
 1. Temps d'évacuation en fonction du nombre de sortie
-
-Cet histogramme illustre comment le nombre de sorties affecte le temps d'évacuation. Nous pouvons observer qu’avec une seule sortie, les temps d’évacuation sont assez longs car les blocages sont inévitables. En revanche, lorsqu’il y a quatre sorties, le temps d’évacuation est considérablement réduit, ce qui permet une évacuation plus rapide.  
-
+<img src="nb_sortie/temps_evacuation_sortie.png">
+Cet histogramme illustre comment le nombre de sorties affecte le temps d'évacuation. Nous pouvons observer qu’avec une seule sortie, les temps d’évacuation sont assez longs car les blocages sont inévitables. En revanche, lorsqu’il y a quatre sorties, le temps d’évacuation est considérablement réduit, ce qui permet une évacuation plus rapide. 
 
 
 2. Taux d'évacuation en fonction du nombre de sortie
-
+<img src="nb_sortie/taux_sortie.png">
 Dans cet histogramme, nous avons 4 valeurs distinctes correspondant à 1, 2, 3 et 4 sorties disponibles. Nous avons observé que le temps nécessaire pour évacuer la population diminue à mesure que le nombre de sorties augmente. Plus précisément, pour une seule sortie, le taux d'évacuation est initialement plus faible, mais il s'améliore considérablement avec l'ajout de sorties supplémentaires. Cela indique que la disponibilité de plusieurs sorties accélère le processus d'évacuation. 
 
 
-
 Ces 2 résultats montrent l’importance de disposer d’un nombre adéquat de sorties lors de la conception et de l’aménagement des espaces et La répartition stratégique des sorties peut réduire le risque de congestion. 
-
-
 
 
 ### Niveau de perception du danger
 Situation : Nous avons un espace de dimensions 30 mètres x 30 mètres, équipé de 2 sorties pour l'évacuation. Nous simulons le déplacement de 60 personnes à travers cet espace, avec une vitesse variant entre 0.3 et 0.7 m/s pour le niveau de perception faible, et entre 1.0 et 1.8 m/s pour le niveau élevé. 
 
 1. Temps d'évacuation total en fonction du niveau de perception du danger
-
+<img src="nv_perception/temps_evacuation_niveau.png">
 Cet histogramme divise les données en trois catégories selon le niveau de perception du danger : tous les niveaux, niveau faible (vitesse entre 0.3 et 0.8 m/s) et niveau élevé (vitesse entre 1.0 et 1.6 m/s). Les barres représentent le temps d'évacuation total et moyen pour chaque catégorie. 
 Nous pouvons remarquer que pour les niveaux de perception faible, les temps d'évacuation total et moyen sont plus élevés que les autres, les personnes prennent donc plus de temps à évacuer par rapport à celles ayant un niveau élevé. Pour les niveaux de perception élevés, le temps d'évacuation total est le plus court, ce qui indique une évacuation plus rapide et efficace pour ce groupe. 
 
 
 2. Taux d'évacuation en fonction du niveau de perception¶
-
+<img src="nv_perception/taux_niveau.png">
 Cet histogramme représentant le taux d'évacuation en fonction du niveau de perception du danger, nous avons 3 catégories distinctes : tous les niveaux, niveau faible et niveau élevé. Pour le niveau faible, la vitesse de déplacement varie entre 0.3 et 0.7 m/s, tandis que pour le niveau élevé, la vitesse est entre 1.1 et 1.6 m/s. Sur un temps de simulation de 120 secondes, nous avons constaté que les personnes ayant un niveau de perception élevé étaient évacuées à 100%. Cependant, le taux d'évacuation réduit à environ 70% pour celles ayant un niveau de perception faible. 
 
 
@@ -106,53 +102,38 @@ En réalité, ces différents niveaux de perception font référence à des pers
 
 ### Simulation des scénarios
 #### Scénario 1 : Évacuation d’une salle de classe
-Dimensions de la salle : 8m x 8m
-
-Nombre de personnes : 30
-
-Dispositions de sorties : 1 puis 2 portes ouvertes, une seule personne peut se passer en même temps
-
-Population étudiée : étudiants et enseignants, avec une vitesse entre 0.3 et 1.3 m/s (pour simuler l’évitement d'obstacles)
-
+- Dimensions de la salle : 8m x 8m
+- Nombre de personnes : 30
+- Dispositions de sorties : 1 puis 2 portes ouvertes, une seule personne peut se passer en même temps
+- Population étudiée : étudiants et enseignants, avec une vitesse entre 0.3 et 1.3 m/s (pour simuler l’évitement d'obstacles)
 
 Résultats : 
 
 Avec une seule sortie
-
-A t =  89 s, tout le monde est évacué avec succès
-
+- A t =  89 s, tout le monde est évacué avec succès
 <img src="Cas 1/Cas1_1sortie.gif">
 <img src="Cas 1/Cas1_1sortie.png">
 <img src="Cas 1/Cas1_1sortie_taux_evac_temps.png">
 
 
 Avec 2 sorties
-
-A t =  71 s, tout le monde est évacué avec succès
-
+- A t =  71 s, tout le monde est évacué avec succès
 <img src="Cas 1/Cas1_2sortie.gif">
 <img src="Cas 1/Cas1_2sortie.png">
 <img src="Cas 1/Cas1_2sortie_taux_evac_temps.png">
 
 
+
 #### Scénario 2 : Évacuation dans un couloir
-Dimensions de la salle : 30m x 2m
-
-Nombre de personnes : 50
-
-Dispositions de sorties : 2 portes ouvertes à 2 côté de couloir, une seule personne peut se passer en même temps
-
-Population étudiée : étudiants et enseignants, avec une vitesse entre 0.3 et 0.7 m/s (car le couloir est étroit)
-
+- Dimensions de la salle : 30m x 2m
+- Nombre de personnes : 50
+- Dispositions de sorties : 2 portes ouvertes à 2 côté de couloir, une seule personne peut se passer en même temps
+- Population étudiée : étudiants et enseignants, avec une vitesse entre 0.3 et 0.7 m/s (car le couloir est étroit)
 
 Résultats : 
-
-A t =  73 s, tout le monde est évacué avec succès
-
-temps total = 73s
-
-temps moyen = 29.35s
-
+- A t =  73 s, tout le monde est évacué avec succès
+- temps total = 73s
+- temps moyen = 29.35s
 <img src="Cas 2/Cas2_2sortie.gif">
 <img src="Cas 2/Cas2_2sortie.png">
 <img src="Cas 2/Cas2_2sortie_taux_evac_temps.png">
@@ -160,23 +141,16 @@ temps moyen = 29.35s
 
 
 #### Scénario 3 : Évacuation d’une grande salle
-Dimensions de la salle : 25m x 15m
-
-Nombre de personnes : 200
-
-Dispositions de sorties : 4 portes ouvertes à 4 côté de la salle, 2 personnes peut se passer en même temps
-
-Population étudiée : adultes, avec une vitesse entre 0.3 et 0.7 m/s
+- Dimensions de la salle : 25m x 15m
+- Nombre de personnes : 200
+- Dispositions de sorties : 4 portes ouvertes à 4 côté de la salle, 2 personnes peut se passer en même temps
+- Population étudiée : adultes, avec une vitesse entre 0.3 et 0.7 m/s
 
 
 Résultats :
-
-A t =  112 s, tout le monde est évacué avec succès
-
-temps total = 112 s
-
-temps moyen = 40.56 s
-
+- A t =  112 s, tout le monde est évacué avec succès
+- temps total = 112 s
+- temps moyen = 40.56 s
 <img src="Cas 3/Cas3_4sortie.gif">
 <img src="Cas 3/Cas3_4sortie.png">
 <img src="Cas 3/Cas3_4sortie_taux_evac_temps.png">
