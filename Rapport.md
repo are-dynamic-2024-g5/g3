@@ -67,4 +67,4 @@ En résumé, le temps d’évacuation total est un indicateur important pour mes
 D'ailleurs, en raison des différences de vitesse de déplacement et de perception du danger entre les personnes, le temps d'évacuation moyen sera différent pour chaque personne. Cela peut être affecté par des différences individuelles et des comportements imprévisibles des personnes.
 Cependant, le taux de réussite de l'évacuation n'est peut-être pas le meilleur indicateur pour définir une évacuation réussie. Par exemple, il peut ne pas tenir compte des personnes qui sont déjà en danger pendant l'évacuation.
 
-(https://ibb.co/47Y61RY)
+!(Cas 1/Cas1_1sortie.gif)
